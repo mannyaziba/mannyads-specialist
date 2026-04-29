@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Google Ads & Appeals case work by Immanuel Aziba — five structured assets demonstrating how ad account issues are investigated, appealed, and resolved.">
+<title>Case Work — Immanuel Aziba</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --page-bg: #F4F3EF;
+    --surface: #FAFAF8;
+    --surface-2: #EFEEEA;
+    --ink: #1A1B1E;
+    --ink-mid: #3D3E42;
+    --ink-light: #6B6C72;
+    --ink-muted: #9B9DA3;
+    --border: #DDDCDA;
+    --border-strong: #C8C7C3;
+    --accent: #1C5F7A;
+    --accent-mid: #2980A3;
+    --accent-light: #D4EAF3;
+    --accent-pale: #EAF4F8;
+    --gold: #8A6E3A;
+    --gold-pale: #F2EBD9;
+    --success: #2A6E45;
+    --success-pale: #DDF0E7;
+    --warn: #7A5200;
+    --warn-pale: #FFF0CC;
+    --danger: #8B2020;
+    --danger-pale: #FDEAEA;
+  }
+
+  html { background: var(--page-bg); color: var(--ink); font-family: 'DM Sans', sans-serif; scroll-behavior: smooth; }
+  body {
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(244,243,239,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px;
+  }
+  .nav-logo {
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 13px; color: var(--ink-light);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a.active { color: var(--accent); font-weight: 500; }
+  .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; color: var(--ink-light); }
+
+  /* HERO */
+  .hero {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 5.5rem 2.5rem 4.5rem;
+  }
+  .hero-inner { max-width: 860px; margin: 0 auto; }
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    color: var(--accent-mid);
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+  }
+  h1 strong { font-weight: 500; }
+  .hero-desc {
+    font-size: 16px;
+    color: var(--ink-light);
+    max-width: 540px;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+  }
+  .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    background: var(--surface-2);
+    border: 1px solid var(--border-strong);
+    color: var(--ink-mid);
+    padding: 4px 12px;
+    border-radius: 3px;
+    letter-spacing: 0.04em;
+  }
+
+  /* LAYOUT */
+  .layout { max-width: 860px; margin: 0 auto; padding: 0 2.5rem; }
+
+  /* ASSET */
+  .asset { padding: 3.5rem 0; border-bottom: 1px solid var(--border); }
+  .asset-header { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.75rem; }
+  .asset-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-muted);
+    flex-shrink: 0;
+  }
+  .asset-title { font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 500; color: var(--ink); line-height: 1.2; }
+  .asset-sub { font-size: 13px; color: var(--ink-muted); font-style: italic; margin-top: 4px; }
+
+  /* SECTION LABEL */
+  .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin: 2rem 0 0.75rem;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* FACTS */
+  .facts { display: flex; flex-direction: column; gap: 0; }
+  .fact {
+    display: grid; grid-template-columns: 110px 1fr;
+    gap: 0 1rem;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+  .fact:last-child { border-bottom: none; }
+  .fact dt { color: var(--ink-muted); font-weight: 400; }
+  .fact dd { color: var(--ink-mid); }
+
+  /* BULLETS */
+  ul.clean { list-style: none; padding: 0; }
+  ul.clean li {
+    padding: 5px 0 5px 16px;
+    position: relative;
+    font-size: 14px;
+    color: var(--ink-mid);
+    line-height: 1.6;
+    border-bottom: 1px solid var(--border);
+  }
+  ul.clean li:last-child { border-bottom: none; }
+  ul.clean li::before {
+    content: '→';
+    position: absolute; left: 0;
+    color: var(--accent-mid);
+    font-size: 12px;
+    top: 7px;
+  }
+
+  /* CALLOUT */
+  .callout {
+    background: var(--accent-pale);
+    border: 1px solid var(--accent-light);
+    border-left: 3px solid var(--accent-mid);
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 3px 3px 0;
+    font-size: 14px;
+    color: var(--ink-mid);
+    font-style: italic;
+    line-height: 1.75;
+  }
+
+  /* APPEAL BOX */
+  .appeal-box {
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: 3px;
+    margin: 1.5rem 0;
+    overflow: hidden;
+  }
+  .appeal-header {
+    background: var(--surface-2);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 16px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.08em;
+  }
+  .appeal-body { padding: 1.25rem 1.5rem; }
+  .appeal-para { font-size: 14px; color: var(--ink-mid); line-height: 1.8; margin-bottom: 0.875rem; }
+  .appeal-para:last-child { margin-bottom: 0; }
+
+  /* TABLE */
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 3px; margin: 1.5rem 0; }
+  table.log { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .log th {
+    text-align: left;
+    padding: 9px 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    background: var(--surface-2);
+    border-bottom: 1px solid var(--border-strong);
+    font-weight: 400;
+  }
+  .log td { padding: 9px 12px; color: var(--ink-mid); border-bottom: 1px solid var(--border); vertical-align: middle; }
+  .log tbody tr:last-child td { border-bottom: none; }
+  .badge {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 2px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+  .b-resolved { background: var(--success-pale); color: var(--success); }
+  .b-progress { background: var(--warn-pale); color: var(--warn); }
+  .b-escalated { background: var(--danger-pale); color: var(--danger); }
+
+  /* PRIORITY */
+  .p-stack { display: flex; flex-direction: column; gap: 10px; margin: 1rem 0; }
+  .p-row {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    overflow: hidden;
+  }
+  .p-side {
+    padding: 1rem;
+    border-right: 1px solid var(--border);
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .p-side-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .p-side-label { font-size: 10px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+  .p-high .p-side-num { color: var(--danger); }
+  .p-mid .p-side-num { color: var(--warn); }
+  .p-low .p-side-num { color: var(--success); }
+  .p-main { padding: 1rem 1.25rem; }
+  .p-main-title { font-weight: 500; font-size: 14px; color: var(--ink); margin-bottom: 4px; }
+  .p-main-body { font-size: 13px; color: var(--ink-light); line-height: 1.6; }
+
+  /* STEPS */
+  .step-list { display: flex; flex-direction: column; gap: 0; margin-top: 1rem; }
+  .step {
+    display: grid; grid-template-columns: 48px 1fr;
+    gap: 0 1rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .step:last-child { border-bottom: none; }
+  .step-n {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--accent-mid);
+    padding-top: 2px;
+  }
+  .step-t { font-weight: 500; font-size: 14px; color: var(--ink); margin-bottom: 4px; }
+  .step-b { font-size: 13px; color: var(--ink-light); line-height: 1.65; }
+
+  /* CLOSING */
+  .closing { padding: 4rem 0 5rem; }
+  .closing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .closing-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 1.25rem;
+  }
+  .c-label { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--ink-muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+  .c-val { font-size: 14px; color: var(--ink-mid); }
+  .c-val a { color: var(--accent); text-decoration: none; }
+  .c-val a:hover { text-decoration: underline; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    padding: 1.25rem 2.5rem;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-muted);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  /* MOBILE NAV */
+  @media (max-width: 640px) {
+    nav { padding: 0 1.25rem; }
+    .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 56px; left: 0; right: 0; background: var(--surface); border-bottom: 1px solid var(--border); padding: 0.5rem 0; }
+    .nav-links.open { display: flex; }
+    .nav-links li { border-bottom: 1px solid var(--border); }
+    .nav-links a { display: block; padding: 0.75rem 1.25rem; }
+    .nav-hamburger { display: block; }
+    .hero, .layout { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .closing-grid { grid-template-columns: 1fr; }
+    .p-row { grid-template-columns: 1fr; }
+    .p-side { border-right: none; border-bottom: 1px solid var(--border); flex-direction: row; align-items: center; gap: 10px; }
+    .fact { grid-template-columns: 1fr; gap: 2px; }
+    footer { flex-direction: column; gap: 4px; text-align: center; padding: 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">MANNY.AZIBA</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html#work">Work</a></li>
+    <li><a href="case-work.html" class="active">Case Work</a></li>
+    <li><a href="index.html#tools">Tools</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+      <line x1="3" y1="6" x2="17" y2="6"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="14" x2="17" y2="14"/>
+    </svg>
+  </button>
+</nav>
+
+<main>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Proof Assets — 2025</div>
+      <h1>Google Ads &amp;<br><strong>Appeals Case Work</strong></h1>
+      <p class="hero-desc">
+        Five structured assets showing how I investigate ad account issues, write appeals, and manage cases. An operational record, not a portfolio.
+      </p>
+      <div class="tags">
+        <span class="tag">Google Ads Certified</span>
+        <span class="tag">5 Cases Documented</span>
+        <span class="tag">Available Immediately</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="layout">
+
+    <!-- 01 -->
+    <section class="asset" id="asset-01">
+      <div class="asset-header">
+        <span class="asset-num">01 /</span>
+        <div>
+          <div class="asset-title">Ad Disapproval: Diagnosis &amp; Resolution</div>
+          <div class="asset-sub">Case ADS-002 · Account Suspension — Suspicious Payment Activity</div>
+        </div>
+      </div>
+
+      <div class="label">The Problem</div>
+      <dl class="facts">
+        <div class="fact"><dt>Issue</dt><dd>Account suspended — ad serving stopped completely</dd></div>
+        <div class="fact"><dt>Reported</dt><dd>Client noticed ads offline overnight, no warning email</dd></div>
+        <div class="fact"><dt>Initial read</dt><dd>Likely billing mismatch or landing page policy flag</dd></div>
+      </dl>
+
+      <div class="label">Investigation</div>
+      <ul class="clean">
+        <li>Dashboard showed "Suspended: Suspicious Payment Activity"</li>
+        <li>Payment history — card expired 6 days prior, auto-renewal failed silently</li>
+        <li>Reviewed policy — confirmed billing integrity flag, not a content violation</li>
+        <li>Audited ad copy and landing page — no content violations found</li>
+        <li>Documented all findings before taking action</li>
+      </ul>
+
+      <div class="label">Action Taken</div>
+      <ul class="clean">
+        <li>Updated payment method and cleared outstanding balance</li>
+        <li>Drafted appeal citing exact cause — expired card, not suspicious intent</li>
+        <li>Submitted with supporting documentation</li>
+      </ul>
+      <div class="callout">
+        "We have identified that the suspension was triggered by a payment method expiry resulting in a failed renewal. This was not indicative of suspicious activity. We have updated payment details and cleared all outstanding balances. We respectfully request reinstatement of the account."
+      </div>
+
+      <div class="label">Outcome</div>
+      <dl class="facts">
+        <div class="fact"><dt>Result</dt><dd>Account reinstated within 36 hours</dd></div>
+        <div class="fact"><dt>Lesson</dt><dd>Billing suspensions resolve faster when the appeal names the exact policy and eliminates intent concerns</dd></div>
+      </dl>
+    </section>
+
+    <!-- 02 -->
+    <section class="asset" id="asset-02">
+      <div class="asset-header">
+        <span class="asset-num">02 /</span>
+        <div>
+          <div class="asset-title">Appeal Writing Sample</div>
+          <div class="asset-sub">Case ADS-001 · Disapproval — Misleading or Exaggerated Claims Policy</div>
+        </div>
+      </div>
+
+      <div class="label">Context</div>
+      <ul class="clean">
+        <li>Ad headline contained "guaranteed results" — flagged under Misleading Claims policy</li>
+        <li>Landing page made no such guarantee — headline was the sole trigger</li>
+        <li>Headline rewritten before appeal submitted</li>
+      </ul>
+
+      <div class="label">Appeal Written</div>
+      <div class="appeal-box">
+        <div class="appeal-header">SUBJECT: APPEAL — AD DISAPPROVAL / MISLEADING CLAIM</div>
+        <div class="appeal-body">
+          <p class="appeal-para">Thank you for reviewing this case. We have carefully reviewed the disapproval notice and identified that the flagged content was the ad headline, which contained the phrase "guaranteed results." We understand this falls under Google's Misleading or Exaggerated Claims policy, and we accept that this language was inappropriate.</p>
+          <p class="appeal-para">We have updated the headline to accurately reflect our offering without making performance guarantees. The updated ad and landing page are now consistent with each other and fully compliant with Google's advertising policies.</p>
+          <p class="appeal-para">We respectfully request that the updated ad be reviewed and approved. We are committed to maintaining policy compliance in all future campaigns. Thank you for your time.</p>
+        </div>
+      </div>
+
+      <div class="label">Why This Works</div>
+      <ul class="clean">
+        <li>Acknowledges the violation directly — no defensiveness</li>
+        <li>Names the specific policy — shows research was done</li>
+        <li>States the fix clearly — gives the reviewer confidence</li>
+        <li>Calm, professional tone — no frustration or urgency</li>
+        <li>Concise — easy for the reviewer to act on</li>
+      </ul>
+    </section>
+
+    <!-- 03 -->
+    <section class="asset" id="asset-03">
+      <div class="asset-header">
+        <span class="asset-num">03 /</span>
+        <div>
+          <div class="asset-title">Case Tracking System</div>
+          <div class="asset-sub">Live log — updated at every stage across all simultaneous cases</div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="log">
+          <thead>
+            <tr>
+              <th>Case ID</th>
+              <th>Issue Type</th>
+              <th>Status</th>
+              <th>Action Taken</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ADS-001</td>
+              <td>Disapproval — Misleading claim</td>
+              <td><span class="badge b-resolved">Resolved</span></td>
+              <td>Rewrote headline, submitted appeal</td>
+              <td>Approved in 24h</td>
+            </tr>
+            <tr>
+              <td>ADS-002</td>
+              <td>Suspension — Payment flag</td>
+              <td><span class="badge b-resolved">Resolved</span></td>
+              <td>Fixed billing, cleared balance, appealed</td>
+              <td>Reinstated 36h</td>
+            </tr>
+            <tr>
+              <td>ADS-003</td>
+              <td>Disapproval — Destination mismatch</td>
+              <td><span class="badge b-progress">In Progress</span></td>
+              <td>Audited landing page, flagged client</td>
+              <td>Pending fix</td>
+            </tr>
+            <tr>
+              <td>ADS-004</td>
+              <td>Disapproval — Trademark issue</td>
+              <td><span class="badge b-escalated">Escalated</span></td>
+              <td>Researched policy, drafted appeal</td>
+              <td>Awaiting review</td>
+            </tr>
+            <tr>
+              <td>ADS-005</td>
+              <td>Billing — Ad serving paused</td>
+              <td><span class="badge b-resolved">Resolved</span></td>
+              <td>Confirmed payment, reactivated</td>
+              <td>Serving resumed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 04 -->
+    <section class="asset" id="asset-04">
+      <div class="asset-header">
+        <span class="asset-num">04 /</span>
+        <div>
+          <div class="asset-title">Multi-Case Prioritisation</div>
+          <div class="asset-sub">Three cases arrive at once — here is how I triage</div>
+        </div>
+      </div>
+
+      <div class="label">Scenario</div>
+      <ul class="clean">
+        <li>Case A — Full account suspended (all ads offline, revenue impact)</li>
+        <li>Case B — Single ad disapproved (rest of campaign running normally)</li>
+        <li>Case C — Billing query (invoice discrepancy, no immediate ad impact)</li>
+      </ul>
+
+      <div class="label">Prioritisation</div>
+      <div class="p-stack">
+        <div class="p-row p-high">
+          <div class="p-side"><span class="p-side-num">P1</span><span class="p-side-label">High</span></div>
+          <div class="p-main">
+            <div class="p-main-title">Case A — Account Suspension</div>
+            <div class="p-main-body">Full account offline = highest business impact. Investigate immediately. Prepare appeal same day.</div>
+          </div>
+        </div>
+        <div class="p-row p-mid">
+          <div class="p-side"><span class="p-side-num">P2</span><span class="p-side-label">Mid</span></div>
+          <div class="p-main">
+            <div class="p-main-title">Case C — Billing Query</div>
+            <div class="p-main-body">Billing issues escalate to suspension if unresolved. Address before it compounds.</div>
+          </div>
+        </div>
+        <div class="p-row p-low">
+          <div class="p-side"><span class="p-side-num">P3</span><span class="p-side-label">Low</span></div>
+          <div class="p-main">
+            <div class="p-main-title">Case B — Single Ad Disapproval</div>
+            <div class="p-main-body">Campaign still running. Fix and appeal within 24h once A and C are stable.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 -->
+    <section class="asset" id="asset-05">
+      <div class="asset-header">
+        <span class="asset-num">05 /</span>
+        <div>
+          <div class="asset-title">Personal Appeals Framework</div>
+          <div class="asset-sub">My standard process for every case — repeatable and documented</div>
+        </div>
+      </div>
+
+      <div class="step-list">
+        <div class="step"><div class="step-n">01</div><div><div class="step-t">Identify</div><div class="step-b">Read the notice in full. Identify the exact policy cited. Do not assume. Log the case immediately.</div></div></div>
+        <div class="step"><div class="step-n">02</div><div><div class="step-t">Investigate</div><div class="step-b">Cross-reference the policy with ad content, landing page, and account history. Find the real cause.</div></div></div>
+        <div class="step"><div class="step-n">03</div><div><div class="step-t">Fix First</div><div class="step-b">Fix the root cause before writing the appeal. Appealing without fixing first is a wasted submission.</div></div></div>
+        <div class="step"><div class="step-n">04</div><div><div class="step-t">Write the Appeal</div><div class="step-b">Reference the specific policy by name. Describe the fix. Calm, concise, professional tone.</div></div></div>
+        <div class="step"><div class="step-n">05</div><div><div class="step-t">Submit &amp; Track</div><div class="step-b">Submit through the correct channel. Log in the tracker. Set a 48–72h follow-up reminder.</div></div></div>
+        <div class="step"><div class="step-n">06</div><div><div class="step-t">Follow Up</div><div class="step-b">If unsuccessful, analyse the rejection, escalate if needed, adjust and resubmit with documentation.</div></div></div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="closing-grid">
+        <div class="closing-card">
+          <div class="c-label">Contact</div>
+          <div class="c-val"><a href="mailto:mannyaziba@gmail.com">mannyaziba@gmail.com</a></div>
+        </div>
+        <div class="closing-card">
+          <div class="c-label">Location</div>
+          <div class="c-val">Nigeria · Remote · Available Immediately</div>
+        </div>
+        <div class="closing-card">
+          <div class="c-label">Certification</div>
+          <div class="c-val">Google Ads — Search &amp; Fundamentals</div>
+        </div>
+        <div class="closing-card">
+          <div class="c-label">Education</div>
+          <div class="c-val">BSc Software Engineering · Miva Open University</div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /layout -->
+
+</main>
+
+<footer>
+  <span>IMMANUEL AZIBA · CASE WORK · 2025–2026</span>
+  <a href="mailto:mannyaziba@gmail.com">mannyaziba@gmail.com</a>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+</script>
+
+</body>
+</html>

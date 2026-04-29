@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Immanuel Aziba — Google Ads & Appeals Specialist. Remote, available immediately.">
+<title>Immanuel Aziba — Google Ads & Appeals Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --page-bg: #F4F3EF;
+    --surface: #FAFAF8;
+    --surface-2: #EFEEEA;
+    --ink: #1A1B1E;
+    --ink-mid: #3D3E42;
+    --ink-light: #6B6C72;
+    --ink-muted: #9B9DA3;
+    --border: #DDDCDA;
+    --border-strong: #C8C7C3;
+    --accent: #1C5F7A;
+    --accent-mid: #2980A3;
+    --accent-light: #D4EAF3;
+    --accent-pale: #EAF4F8;
+    --gold: #8A6E3A;
+    --gold-pale: #F2EBD9;
+    --success: #2A6E45;
+    --success-pale: #DDF0E7;
+  }
+
+  html { background: var(--page-bg); color: var(--ink); font-family: 'DM Sans', sans-serif; scroll-behavior: smooth; }
+  body { min-height: 100vh; font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(244,243,239,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px;
+  }
+  .nav-logo {
+    font-family: 'DM Mono', monospace;
+    font-weight: 500; font-size: 13px; letter-spacing: 0.04em;
+    color: var(--ink); text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: 13px; color: var(--ink-light); text-decoration: none; transition: color 0.15s; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a.active { color: var(--accent); font-weight: 500; }
+  .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; color: var(--ink-light); }
+
+  /* WRAPPER */
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 2.5rem; }
+
+  /* ── HERO ─────────────────────────────── */
+  #home {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 6rem 2.5rem 5rem;
+  }
+  .hero-inner { max-width: 860px; margin: 0 auto; }
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: 0.14em;
+    color: var(--accent-mid); text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 400; color: var(--ink);
+    line-height: 1.15; letter-spacing: -0.025em;
+    margin-bottom: 1.5rem;
+  }
+  h1 strong { font-weight: 500; }
+  .hero-desc {
+    font-size: 17px; color: var(--ink-light);
+    max-width: 560px; line-height: 1.75;
+    margin-bottom: 2.5rem;
+  }
+  .hero-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 2.5rem; }
+  .chip {
+    font-family: 'DM Mono', monospace; font-size: 11px;
+    background: var(--surface-2); border: 1px solid var(--border-strong);
+    color: var(--ink-mid); padding: 4px 12px; border-radius: 3px; letter-spacing: 0.04em;
+  }
+  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-primary {
+    font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500;
+    background: var(--accent); color: #fff;
+    padding: 10px 22px; border-radius: 3px; text-decoration: none;
+    transition: background 0.15s;
+  }
+  .btn-primary:hover { background: var(--accent-mid); }
+  .btn-secondary {
+    font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 400;
+    background: transparent; color: var(--ink-mid);
+    border: 1px solid var(--border-strong);
+    padding: 10px 22px; border-radius: 3px; text-decoration: none;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .btn-secondary:hover { border-color: var(--ink-mid); color: var(--ink); }
+
+  /* ── SECTION SHARED ───────────────────── */
+  section { padding: 4rem 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  .section-eyebrow {
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink-muted); margin-bottom: 1.5rem;
+    padding-bottom: 8px; border-bottom: 1px solid var(--border);
+  }
+  h2 {
+    font-size: clamp(1.3rem, 3vw, 1.9rem); font-weight: 400;
+    color: var(--ink); letter-spacing: -0.015em;
+    margin-bottom: 1rem; line-height: 1.2;
+  }
+  h2 strong { font-weight: 500; }
+  .section-lead { font-size: 15px; color: var(--ink-light); max-width: 560px; line-height: 1.75; margin-bottom: 2.5rem; }
+
+  /* ── WORK ─────────────────────────────── */
+  .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 2rem; }
+  .work-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 3px; padding: 1.5rem;
+    display: flex; flex-direction: column; gap: 0.5rem;
+  }
+  .work-card-num {
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    color: var(--ink-muted); letter-spacing: 0.1em; margin-bottom: 0.25rem;
+  }
+  .work-card-title { font-weight: 500; font-size: 14px; color: var(--ink); }
+  .work-card-desc { font-size: 13px; color: var(--ink-light); line-height: 1.6; }
+  .work-card-tag {
+    margin-top: auto; padding-top: 1rem;
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    color: var(--accent-mid); letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .work-link-row { margin-top: 0.5rem; }
+  .work-link {
+    font-size: 13px; color: var(--accent); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .work-link:hover { text-decoration: underline; }
+  .work-link svg { width: 12px; height: 12px; }
+
+  /* COMPETENCIES TABLE */
+  .comp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--border); border-radius: 3px; overflow: hidden; margin-top: 2rem; }
+  .comp-item {
+    padding: 0.875rem 1rem; border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    font-size: 13px; color: var(--ink-mid);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .comp-item:nth-child(even) { border-right: none; }
+  .comp-item:nth-last-child(-n+2) { border-bottom: none; }
+  .comp-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent-mid); flex-shrink: 0; }
+
+  /* ── TOOLS ────────────────────────────── */
+  .tools-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 3px; overflow: hidden; }
+  .tool-row {
+    display: grid; grid-template-columns: 160px 1fr auto;
+    align-items: center; gap: 1rem;
+    padding: 0.875rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    font-size: 13px;
+  }
+  .tool-row:last-child { border-bottom: none; }
+  .tool-name { font-weight: 500; color: var(--ink); font-size: 13px; }
+  .tool-desc { color: var(--ink-light); }
+  .tool-badge {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.05em;
+    background: var(--surface-2); border: 1px solid var(--border);
+    color: var(--ink-muted); padding: 2px 8px; border-radius: 2px;
+    white-space: nowrap;
+  }
+  .tool-badge.primary { background: var(--accent-pale); border-color: var(--accent-light); color: var(--accent); }
+
+  /* FRAMEWORK */
+  .framework { margin-top: 2.5rem; }
+  .framework-title { font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 1rem; }
+  .framework-steps { display: flex; gap: 0; border: 1px solid var(--border); border-radius: 3px; overflow: hidden; }
+  .framework-step {
+    flex: 1; padding: 1rem 0.875rem; border-right: 1px solid var(--border);
+    background: var(--surface); text-align: center;
+  }
+  .framework-step:last-child { border-right: none; }
+  .fs-num { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent-mid); margin-bottom: 4px; }
+  .fs-label { font-size: 12px; font-weight: 500; color: var(--ink); }
+
+  /* ── CONTACT ──────────────────────────── */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .contact-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 3px; padding: 1.5rem;
+  }
+  .contact-card.primary { border-color: var(--accent-light); background: var(--accent-pale); }
+  .c-label { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--ink-muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .contact-card.primary .c-label { color: var(--accent-mid); }
+  .c-val { font-size: 14px; color: var(--ink-mid); }
+  .c-val a { color: var(--accent); text-decoration: none; font-weight: 500; font-size: 15px; }
+  .c-val a:hover { text-decoration: underline; }
+  .contact-note { margin-top: 2rem; font-size: 13px; color: var(--ink-muted); font-style: italic; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    padding: 1.25rem 2.5rem;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: 'DM Mono', monospace; font-size: 11px; color: var(--ink-muted);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  /* MOBILE */
+  @media (max-width: 640px) {
+    nav { padding: 0 1.25rem; }
+    .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 56px; left: 0; right: 0; background: var(--surface); border-bottom: 1px solid var(--border); padding: 0.5rem 0; }
+    .nav-links.open { display: flex; }
+    .nav-links li { border-bottom: 1px solid var(--border); }
+    .nav-links a { display: block; padding: 0.75rem 1.25rem; }
+    .nav-hamburger { display: block; }
+    #home { padding: 4rem 1.25rem 3.5rem; }
+    .wrap { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .work-grid { grid-template-columns: 1fr; }
+    .comp-grid { grid-template-columns: 1fr; }
+    .comp-item { border-right: none !important; }
+    .comp-item:last-child { border-bottom: none; }
+    .tool-row { grid-template-columns: 1fr; gap: 4px; }
+    .tool-badge { align-self: flex-start; }
+    .framework-steps { flex-direction: column; }
+    .framework-step { border-right: none; border-bottom: 1px solid var(--border); text-align: left; display: flex; align-items: center; gap: 10px; }
+    .framework-step:last-child { border-bottom: none; }
+    .contact-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 4px; text-align: center; padding: 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#home" class="nav-logo">MANNY.AZIBA</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="case-work.html">Case Work</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+      <line x1="3" y1="6" x2="17" y2="6"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="14" x2="17" y2="14"/>
+    </svg>
+  </button>
+</nav>
+
+<main>
+
+  <!-- HOME / HERO -->
+  <div id="home">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Google Ads &amp; Appeals Specialist · Remote</div>
+      <h1>Immanuel<br><strong>Aziba</strong></h1>
+      <p class="hero-desc">
+        I investigate ad account issues, write structured appeals, and manage cases systematically — from first flag to reinstatement. Process-first, independently operated, available immediately.
+      </p>
+      <div class="hero-chips">
+        <span class="chip">Google Ads Certified</span>
+        <span class="chip">Appeals &amp; Policy</span>
+        <span class="chip">Nigeria · Remote</span>
+        <span class="chip">Available Immediately</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#work" class="btn-primary">View Work</a>
+        <a href="case-work.html" class="btn-secondary">Case Work →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="wrap">
+      <div class="section-eyebrow">01 / Work</div>
+      <h2>What I Do &amp;<br><strong>How I Do It</strong></h2>
+      <p class="section-lead">
+        I handle Google Ads account problems end-to-end — diagnosing the real issue, fixing it before appealing, and tracking every case until it closes.
+      </p>
+
+      <div class="work-grid">
+        <div class="work-card">
+          <div class="work-card-num">01 /</div>
+          <div class="work-card-title">Ad Disapproval Resolution</div>
+          <div class="work-card-desc">Identify the exact policy violated, fix the root cause in the ad or landing page, write a structured appeal referencing the specific policy. No guesswork.</div>
+          <div class="work-card-tag">Policy · Appeals</div>
+        </div>
+        <div class="work-card">
+          <div class="work-card-num">02 /</div>
+          <div class="work-card-title">Account Suspension Recovery</div>
+          <div class="work-card-desc">Full account offline is a revenue emergency. I investigate, document, resolve the underlying cause, and submit a targeted appeal — billing or content, each follows a different path.</div>
+          <div class="work-card-tag">Suspension · Billing</div>
+        </div>
+        <div class="work-card">
+          <div class="work-card-num">03 /</div>
+          <div class="work-card-title">Multi-Case Management</div>
+          <div class="work-card-desc">Running several cases at once with a live tracking log, consistent client updates, and clear prioritisation. Each case gets a status, action, and result — nothing falls through.</div>
+          <div class="work-card-tag">Tracking · Systems</div>
+        </div>
+        <div class="work-card">
+          <div class="work-card-num">04 /</div>
+          <div class="work-card-title">Policy Research &amp; Communication</div>
+          <div class="work-card-desc">Researching Google Ads policies to find exactly what triggered a flag. Writing appeals that are calm, specific, and easy for a reviewer to act on. Persistent through multi-attempt submissions.</div>
+          <div class="work-card-tag">Research · Writing</div>
+        </div>
+      </div>
+
+      <div class="work-link-row">
+        <a href="case-work.html" class="work-link">
+          View full case documentation
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
+        </a>
+      </div>
+
+      <div class="comp-grid" style="margin-top: 2.5rem;">
+        <div class="comp-item"><div class="comp-dot"></div>Google Ads Policy &amp; Violation Diagnosis</div>
+        <div class="comp-item"><div class="comp-dot"></div>Structured Appeal Writing</div>
+        <div class="comp-item"><div class="comp-dot"></div>Root Cause Analysis</div>
+        <div class="comp-item"><div class="comp-dot"></div>Case Tracking &amp; Documentation</div>
+        <div class="comp-item"><div class="comp-dot"></div>Multi-Case Prioritisation</div>
+        <div class="comp-item"><div class="comp-dot"></div>Independent Remote Operation</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section id="tools">
+    <div class="wrap">
+      <div class="section-eyebrow">02 / Tools &amp; Systems</div>
+      <h2>How I Operate<br><strong>Day to Day</strong></h2>
+      <p class="section-lead">
+        Every case is logged, tracked, and documented. These are the tools and the framework I use — not claimed familiarity, but the actual system I run.
+      </p>
+
+      <div class="tools-list">
+        <div class="tool-row">
+          <div class="tool-name">Google Ads Dashboard</div>
+          <div class="tool-desc">Campaign management, disapproval handling, account diagnostics, suspension investigation</div>
+          <div class="tool-badge primary">Primary</div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">Google Sheets</div>
+          <div class="tool-desc">Live case tracking log — Case ID, issue type, status, action taken, result</div>
+          <div class="tool-badge primary">Primary</div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">Notion</div>
+          <div class="tool-desc">Personal operating system — case notes, appeal drafts, policy research, SOPs</div>
+          <div class="tool-badge">Supporting</div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">Google Ads Support</div>
+          <div class="tool-desc">Appeal submission channels, follow-up escalation, secondary contact routes</div>
+          <div class="tool-badge">Supporting</div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">Figma / Framer / Vercel</div>
+          <div class="tool-desc">Design and deployment — adjacent capability from prior UX practice</div>
+          <div class="tool-badge">Adjacent</div>
+        </div>
+      </div>
+
+      <div class="framework">
+        <div class="framework-title">My 6-Step Case Framework — applied to every case, regardless of complexity</div>
+        <div class="framework-steps">
+          <div class="framework-step">
+            <div class="fs-num">01</div>
+            <div class="fs-label">Identify</div>
+          </div>
+          <div class="framework-step">
+            <div class="fs-num">02</div>
+            <div class="fs-label">Investigate</div>
+          </div>
+          <div class="framework-step">
+            <div class="fs-num">03</div>
+            <div class="fs-label">Fix First</div>
+          </div>
+          <div class="framework-step">
+            <div class="fs-num">04</div>
+            <div class="fs-label">Write Appeal</div>
+          </div>
+          <div class="framework-step">
+            <div class="fs-num">05</div>
+            <div class="fs-label">Submit &amp; Track</div>
+          </div>
+          <div class="framework-step">
+            <div class="fs-num">06</div>
+            <div class="fs-label">Follow Up</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-eyebrow">03 / Contact</div>
+      <h2>Available<br><strong>Immediately</strong></h2>
+      <p class="section-lead">
+        Remote-only. Nigeria timezone. Quick to respond, straightforward to work with. Send an email and I'll reply the same day.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-card primary">
+          <div class="c-label">Email</div>
+          <div class="c-val"><a href="mailto:mannyaziba@gmail.com">mannyaziba@gmail.com</a></div>
+        </div>
+        <div class="contact-card">
+          <div class="c-label">Location</div>
+          <div class="c-val">Nigeria · Remote · GMT+1</div>
+        </div>
+        <div class="contact-card">
+          <div class="c-label">Availability</div>
+          <div class="c-val">Immediately — open to freelance or full-time remote roles</div>
+        </div>
+        <div class="contact-card">
+          <div class="c-label">Certification</div>
+          <div class="c-val">Google Ads — Search &amp; Fundamentals</div>
+        </div>
+        <div class="contact-card" style="grid-column: 1 / -1;">
+          <div class="c-label">Education</div>
+          <div class="c-val">BSc Software Engineering · Miva Open University · In Progress (2025–2028)</div>
+        </div>
+      </div>
+
+      <p class="contact-note">Proof assets, resume, and case documentation available on request or via the Case Work page.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>IMMANUEL AZIBA · 2025–2026</span>
+  <a href="mailto:mannyaziba@gmail.com">mannyaziba@gmail.com</a>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Active nav highlighting on scroll
+  const sections = document.querySelectorAll('[id]');
+  const navAs = document.querySelectorAll('.nav-links a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navAs.forEach(a => a.classList.remove('active'));
+        const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
